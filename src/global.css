@@ -1,0 +1,25 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.container {
+    padding: 2rem;
+    text-align: center;
+}
+.pokemon-form {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.card {
+    padding: 1.5rem;
+}
+
+.item {
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+    gap: 2rem;
+}
