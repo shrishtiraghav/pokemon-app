@@ -25,7 +25,7 @@ export const appRouter =  router({
     const pokemons = await ctx.prisma.pokemon.findMany({
             where: { name: { in: input.names } },
           });
-        return pokemons?.map(p => ({ ...p, types: p.types.split(',') })); // Split types into an array
+        return pokemons?.map((p: any) => ({ ...p, types: p.types.split(',') })); // Split types into an array
   }),
   
   getPokemonByType: publicProcedure.input(z.object({
@@ -38,7 +38,7 @@ export const appRouter =  router({
           },
         },
       });
-    return pokemons?.map(p => ({ ...p, types: p.types.split(',') }));  // Split types into an array
+    return pokemons?.map((p:any) => ({ ...p, types: p.types.split(',') }));  // Split types into an array
   }),
 })
   
